@@ -10,8 +10,11 @@
 '''
 
 keyValuePair.Add(1, new RomanValueMapping { Multiple = 1, RomanValue = 'I', MidValue = 'V' });
+
 keyValuePair.Add(10, new RomanValueMapping { Multiple = 10, RomanValue = 'X', MidValue = 'L' });
+
 keyValuePair.Add(100, new RomanValueMapping { Multiple = 100, RomanValue = 'C', MidValue = 'D' });
+
 keyValuePair.Add(1000, new RomanValueMapping { Multiple = 1000, RomanValue = 'M' });
 
 '''
@@ -19,7 +22,9 @@ keyValuePair.Add(1000, new RomanValueMapping { Multiple = 1000, RomanValue = 'M'
 ### Later I have used the private function GetRomanString()
 
 _times - represents the times the character should be repeated
+
 _current and _next - represent the mapping from above table e.g. Mutiple 1 and 10
+
 _romanValues - is used to concatenate the value on either side e.g. 4 we have I and V as IV and 6 we have V and I using string.Format
 
 Later I recursively use GetRomanString to iterate through the multiples.
